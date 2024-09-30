@@ -9,8 +9,20 @@ class Anime extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'original_title',
+        'audience_id',
+        'release_year'
+    ];
+
     public function studios()
     {
         return $this->belongsToMany(Studio::class);
+    }
+
+    public function audiences()
+    {
+        return $this->belongsTo(Audience::class);
     }
 }

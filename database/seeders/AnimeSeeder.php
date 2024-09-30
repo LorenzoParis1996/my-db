@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Anime;
+use App\Models\Audience;
 
 class AnimeSeeder extends Seeder
 {
@@ -59,6 +60,43 @@ class AnimeSeeder extends Seeder
 
         foreach($animes as $anime){
             Anime::create($anime);
+        }
+
+        //In relazioni one to many, i metodi come attach o sync non funzionano, essendo metodi creati per funzionare in relazione many to many.
+
+        //Cicli e condizioni per assegnare un id specifico a un solo dato oppure per assegnare un id specifico a dati multipli (non e' il massimo).
+
+
+        $anime1 = Anime::find(2);
+        $audienceId = 3;
+
+        if ($anime) {
+            $anime1->audience_id = $audienceId;
+            $anime1->save();
+        }
+
+        $audienceOne = Audience::find(1);
+        $audienceTwo = Audience::find(4);
+
+        $animeOneIds = [1,4];
+        $animeTwoIds = [5,6,7,8];
+
+        foreach($animeOneIds as $animeOneId) {
+            $anime = Anime::find($animeOneId);
+            if ($anime) {
+                $anime->audience_id = $audienceOne->id;
+
+                $anime->save();
+            }
+        }
+
+        foreach($animeTwoIds as $animeTwoId) {
+            $anime = Anime::find($animeTwoId);
+            if ($anime) {
+                $anime->audience_id = $audienceTwo->id;
+
+                $anime->save();
+            }
         }
     }
 }
