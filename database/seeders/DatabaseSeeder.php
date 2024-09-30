@@ -13,8 +13,8 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            AnimeSeeder::class,
             StudioSeeder::class,
+            AnimeSeeder::class,
         ]);
     }
 }

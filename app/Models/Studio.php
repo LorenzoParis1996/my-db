@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Studio extends Model
 {
     use HasFactory;
+
+    public function animes()
+    {
+        return $this->belongsToMany(Anime::class);
+    }
 }
