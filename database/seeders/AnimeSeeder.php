@@ -50,7 +50,7 @@ class AnimeSeeder extends Seeder
                 'release_year'=> "2000"
             ],
             [
-                'title'=> "Full Metal Alchemist: Brotherhood",
+                'title'=> "Fullmetal Alchemist: Brotherhood",
                 'original_title'=> "鋼の錬金術師 FULLMETAL ALCHEMIST, Hagane no renkinjutsushi - FULLMETAL ALCHEMIST",
                 'release_year'=> "2009"
             ],
