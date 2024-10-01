@@ -13,7 +13,9 @@ class Anime extends Model
         'title',
         'original_title',
         'audience_id',
-        'release_year'
+        'release_year',
+        'cover_image',
+        'description'
     ];
 
     public function studios()
@@ -21,7 +23,7 @@ class Anime extends Model
         return $this->belongsToMany(Studio::class);
     }
 
-    public function audiences()
+    public function audience() //E' una one to many, il metodo di relazione va scritto al singolare!!!
     {
         return $this->belongsTo(Audience::class);
     }

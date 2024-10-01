@@ -94,10 +94,10 @@ class AnimeSeeder extends Seeder
             $anime1->save();
         }
 
-        $audienceOne = Audience::find(1);
-        $audienceTwo = Audience::find(4);
+        $audienceOne = Audience::find(4);
+        $audienceTwo = Audience::find(1);
 
-        $animeOneIds = [1,4];
+        $animeOneIds = [1,3,4];
         $animeTwoIds = [5,6,7,8];
 
         foreach($animeOneIds as $animeOneId) {
