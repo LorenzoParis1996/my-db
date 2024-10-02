@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/guest', [GuestController::class, 'index'])->name('guest.index');
+Route::get('/guest/{anime}', [GuestController::class, 'show'])->name('guest.show');
 
 Auth::routes();
 

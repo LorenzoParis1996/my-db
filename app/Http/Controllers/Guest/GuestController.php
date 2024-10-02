@@ -40,9 +40,9 @@ class GuestController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Anime $anime)
     {
-        //
+        return view('guest.show', compact('anime'));
     }
 
     /**
