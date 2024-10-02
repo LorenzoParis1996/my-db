@@ -2,30 +2,38 @@
 
 @section('content')
 
+@vite('resources/sass/guest/index.scss')
+
 <div class="container">
 
-    @foreach ($animes as $anime)
+    <article class="d-flex flex-wrap justify-content-center">
 
-    <div class="card" style="width: 18rem;">
-        <img src="{{ asset($anime->cover_image) }}" class="card-img-top" alt="{{$anime->title}}">
-        <div class="card-body">
-          <h5 class="card-title">{{$anime->title}}</h5>
-          <h5 class="card-title">{{$anime->original_title}}</h5>
-          <h5 class="card-title">{{$anime->release_year}}</h5>
+        @foreach ($animes as $anime)
+
+        <div class="card mx-2 mb-3" style="width: 18rem;">
+            <div class="img-container">
+                <img src="{{ asset($anime->cover_image) }}" class="card-img-top" alt="{{$anime->title}}">
+
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Title: {{$anime->title}}</h5>
+              <h6 class="card-title">Original title: {{$anime->original_title}}</h6>
+              <h6 class="card-title">Release year: {{$anime->release_year}}</h6>
 
 
-          <span>{{($anime->audience->name)}}</span>
+              <h6>Audience: {{($anime->audience->name)}}</h6>
 
 
-          @foreach ($anime->studios as $studio)
-          <h5 class="card-title">{{$studio->name}}</h5>
-          @endforeach
+              @foreach ($anime->studios as $studio)
+              <h6 class="card-title">Studio: {{$studio->name}}</h6>
+              @endforeach
 
-          <p class="card-text">{{$anime->description}}</p>
+
+            </div>
         </div>
-    </div>
 
-    @endforeach
+        @endforeach
+    </article>
 
 </div>
 

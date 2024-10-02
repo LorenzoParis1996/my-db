@@ -20,11 +20,14 @@ class AnimeStudioSeeder extends Seeder
         $anime2 = Anime::find(3);
         $anime2->studios()->sync([3]);
 
-        $anime3 = Anime::find(5);
-        $anime3->studios()->sync([5,6]);
+        $anime3 = Anime::find(4);
+        $anime3->studios()->sync([4]);
 
-        $anime4 = Anime::find(8);
-        $anime4->studios()->sync([7]);
+        $anime4 = Anime::find(5);
+        $anime4->studios()->sync([5,6]);
+
+        $anime5 = Anime::find(8);
+        $anime5->studios()->sync([7]);
 
         $studio = Studio::find(2);
 
