@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name', 50);
             $table->string('lastname', 50);
-            $table->string('nationality', 50);
+            $table->string('nationality', 50)->nullable();
             $table->date('date_of_birth')->nullable();
             $table->string('place_of_birth')->nullable();
             $table->string('author_pic')->nullable();
