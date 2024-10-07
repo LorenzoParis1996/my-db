@@ -12,6 +12,10 @@
         <div class="text-container">
             <h5>Title: {{$anime->title}}</h5>
             <h5>Original title: {{$anime->original_title}}</h5>
+            @foreach ($anime->authors as $author)
+            <h5>Original concept: {{$author->name}} {{$author->lastname}}</h5>
+            @endforeach
+
             <h5>Audience: {{$anime->audience->name}}</h5>
             <h5>Release year: {{$anime->release_year}}</h5>
 
