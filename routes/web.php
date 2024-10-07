@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\Guest\GuestController;
+use App\Http\Controllers\Guest\AnimeController;
+use App\Http\Controllers\Guest\AuthorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,8 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/guest/anime', [GuestController::class, 'index'])->name('guest.anime.index');
-Route::get('/guest/anime/{anime}', [GuestController::class, 'show'])->name('guest.anime.show');
+Route::get('/guest/anime', [AnimeController::class, 'index'])->name('guest.anime.index');
+Route::get('/guest/anime/{anime}', [AnimeController::class, 'show'])->name('guest.anime.show');
+
+Route::get('/guest/author', [AuthorController::class, 'index'])->name('guest.author.index');
+Route::get('/guest/author/{author}', [AuthorController::class, 'show'])->name('guest.author.show');
 
 Auth::routes();
 

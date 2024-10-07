@@ -2,7 +2,7 @@
 
 @section('content')
 
-@vite('resources/sass/guest/index.scss')
+@vite('resources/sass/guest/anime/index.scss')
 
 <div class="container">
 

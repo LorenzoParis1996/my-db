@@ -3,22 +3,19 @@
 namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
-use App\Models\Anime;
-use App\Models\Audience;
-use App\Models\Studio;
+use App\Models\Author;
 use Illuminate\Http\Request;
 
-class GuestController extends Controller
+class AuthorController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $animes = Anime::all();
+        $authors = Author::all();
 
-        //dd($animes);
-        return view('guest.anime.index', compact('animes'));
+        return view ('guest.author.index', compact('authors'));
     }
 
     /**
@@ -40,9 +37,9 @@ class GuestController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Anime $anime)
+    public function show(Author $author)
     {
-        return view('guest.anime.show', compact('anime'));
+        return view('guest.author.show', compact('author'));
     }
 
     /**

@@ -2,7 +2,7 @@
 
 @section('content')
 
-@vite('resources/sass/guest/show.scss')
+@vite('resources/sass/guest/anime/show.scss')
 
 <div class="container">
     <article class="d-flex align-items-stretch">
