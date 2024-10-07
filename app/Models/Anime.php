@@ -27,4 +27,9 @@ class Anime extends Model
     {
         return $this->belongsTo(Audience::class);
     }
+
+    public function authors()
+    {
+        return $this->belongsToMany(Author::class);
+    }
 }
