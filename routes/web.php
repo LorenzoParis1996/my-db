@@ -18,8 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/guest', [GuestController::class, 'index'])->name('guest.index');
-Route::get('/guest/{anime}', [GuestController::class, 'show'])->name('guest.show');
+Route::get('/guest/anime', [GuestController::class, 'index'])->name('guest.anime.index');
+Route::get('/guest/anime/{anime}', [GuestController::class, 'show'])->name('guest.anime.show');
 
 Auth::routes();
 

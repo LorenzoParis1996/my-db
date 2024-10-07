@@ -20,7 +20,7 @@
               <h6 class="card-title">Release year: {{$anime->release_year}}</h6>
               <h6 class="card-title">Audience: {{($anime->audience->name)}}</h6>
               <div class="d-flex justify-content-center mt-auto">
-                <a class="btn btn-primary btn-sm" href="{{route('guest.show', $anime)}}">Show details</a>
+                <a class="btn btn-primary btn-sm" href="{{route('guest.anime.show', $anime)}}">Show details</a>
               </div>
 
 

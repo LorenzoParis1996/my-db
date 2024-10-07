@@ -18,7 +18,7 @@ class GuestController extends Controller
         $animes = Anime::all();
 
         //dd($animes);
-        return view('guest.index', compact('animes'));
+        return view('guest.anime.index', compact('animes'));
     }
 
     /**
@@ -42,7 +42,7 @@ class GuestController extends Controller
      */
     public function show(Anime $anime)
     {
-        return view('guest.show', compact('anime'));
+        return view('guest.anime.show', compact('anime'));
     }
 
     /**
