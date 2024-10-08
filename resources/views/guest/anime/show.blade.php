@@ -13,7 +13,7 @@
             <h5>Title: {{$anime->title}}</h5>
             <h5>Original title: {{$anime->original_title}}</h5>
             @foreach ($anime->authors as $author)
-            <h5>Original concept: {{$author->name}} {{$author->lastname}} <a class="fs-6 ps-3 text-decoration-none" href="">More info</a></h5>
+            <h5>Original concept: {{$author->name}} {{$author->lastname}} <a class="fs-6 ps-3 text-decoration-none" href="{{route('guest.author.show', $author)}}">More info</a></h5>
             @endforeach
 
             <h5>Audience: {{$anime->audience->name}}</h5>
