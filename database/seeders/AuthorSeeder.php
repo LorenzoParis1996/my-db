@@ -83,7 +83,7 @@ class AuthorSeeder extends Seeder
                 'nationality'=> "Japanese",
                 'date_of_birth'=> "1973-05-08",
                 'place_of_birth'=> "Makubetsu, Japan",
-                'author_pic'=> "https://image.forumfree.it/1/0/7/0/6/6/7/9/1518522465.png",
+                'author_pic'=> "https://www.animeclick.it/immagini/autore/Hiromu_Arakawa/cover/2481-Hiromu_Arakawa-foto.jpg",
                 'brief_biography'=> "Hiromu Arakawa is a renowned Japanese manga artist, best known for her highly successful series Fullmetal Alchemist (2001–2010). Born on May 8, 1973, in Makubetsu, Japan, she grew up on a dairy farm as the youngest of five siblings. From a young age, Arakawa showed an interest in art and storytelling, often drawing in her school textbooks",
             ],
         ];
