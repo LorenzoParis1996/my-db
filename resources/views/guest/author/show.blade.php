@@ -12,9 +12,9 @@
         <div class="text-container">
             <h5>Last Name: {{$author->lastname}}</h5>
             <h5>Name: {{$author->name}}</h5>
-            <h5>Nationality: {{$author->nationality}}</h5>
-            <h5>Date of birth: {{$author->date_of_birth}}</h5>
-            <h5>Place of birth: {{$author->place_of_birth}}</h5>
+            <h5>Nationality: {{$author->nationality ? $author->nationality : 'Not available'}}</h5>
+            <h5>Date of birth: {{$author->date_of_birth ? $author->date_of_birth : 'Not available'}}</h5>
+            <h5>Place of birth: {{$author->place_of_birth ? $author->place_of_birth : 'Not available'}}</h5>
             <h5>Biography: {{$author->brief_biography}}</h5>
         </div>
     </article>
