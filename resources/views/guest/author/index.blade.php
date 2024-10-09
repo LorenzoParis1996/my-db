@@ -10,7 +10,7 @@
           <div class="card mx-2 mb-3" style="width: 18rem;">
 
               <div class="img-container">
-                  <img src="{{asset($author->author_pic)}}" alt="{{$author->lastname}}" class="card-img-top">
+                  <img src="{{asset($author->author_pic ? $author->author_pic : 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png')}}" alt="{{$author->lastname}}" class="card-img-top">
               </div>
               <div class="card-body d-flex flex-column">
                   <h5>Last name: {{$author->lastname}}</h5>

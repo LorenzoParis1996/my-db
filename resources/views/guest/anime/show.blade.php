@@ -7,7 +7,7 @@
 <div class="container">
     <article class="d-flex align-items-stretch">
         <div class="img-container me-3">
-            <img src="{{ asset($anime->cover_image) }}" alt=" {{$anime->title}}">
+            <img src="{{asset($anime->cover_image ? $anime->cover_image : 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png')}}" alt=" {{$anime->title}}">
         </div>
         <div class="text-container">
             <h5>Title: {{$anime->title}}</h5>
@@ -19,9 +19,13 @@
             <h5>Audience: {{$anime->audience->name}}</h5>
             <h5>Release year: {{$anime->release_year}}</h5>
 
-            @foreach ($anime->studios as $studio)
-            <h5>Studio: {{$studio->name}}</h5>
-            @endforeach
+            <div class="d-flex">
+
+                <h5>Studios:</h5>
+                @foreach ($anime->studios->unique('name') as $studio)
+                <h5 class="px-1">{{$studio->name}}</h5>
+                @endforeach
+            </div>
 
             <h5>Description: {{$anime->description}}</h5>
         </div>

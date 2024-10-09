@@ -21,7 +21,7 @@ class AuthorSeeder extends Seeder
                 'date_of_birth'=> "1960-06-07",
                 'place_of_birth'=> "Sendai, Japan",
                 'author_pic'=> "https://www.animeclick.it/immagini/autore/Hirohiko_Araki/cover/4654-Hirohiko_Araki-foto.jpg",
-                'brief_biography'=> "Hirohiko Araki is a prominent Japanese manga artist, best known for his influential series JoJo's Bizarre Adventure. He was born on June 7, 1960, in Sendai, Japan, into a middle-class family. His father, an avid manga reader, instilled a passion for comics in him from a young age, which was further fueled by his childhood experiences with his younger identical twin sisters, who often kept him isolated in his room with nothing but manga to read",
+                'brief_biography'=> "Hirohiko Araki is a prominent Japanese manga artist, best known for his influential series JoJo's Bizarre Adventure. He was born on June 7, 1960, in Sendai, Japan, into a middle-class family. His father, an avid manga reader, instilled a passion for comics in him from a young age, which was further fueled by his childhood experiences with his younger identical twin sisters, who often kept him isolated in his room with nothing but manga to read.",
             ],
             [
                 'name'=> "Ai",
@@ -66,7 +66,7 @@ class AuthorSeeder extends Seeder
                 'date_of_birth'=> null,
                 'place_of_birth'=> "Tokyo, Japan",
                 'author_pic'=> "https://www.animeclick.it/immagini/autore/Tsugumi_Ohba/cover/24021-Tsugumi_Ohba-foto.jpg",
-                'brief_biography'=> "Tsugumi Ohba is a Japanese manga writer, best known for his collaboration with illustrator Takeshi Obata on the critically acclaimed series Death Note and Bakuman. Born in Tokyo, Japan, Ohba's true identity remains a mystery, as they have chosen to maintain anonymity throughout their career",
+                'brief_biography'=> "Tsugumi Ohba is a Japanese manga writer, best known for his collaboration with illustrator Takeshi Obata on the critically acclaimed series Death Note and Bakuman. Born in Tokyo, Japan, Ohba's true identity remains a mystery, as they have chosen to maintain anonymity throughout their career.",
             ],
             [
                 'name'=> "George",
@@ -84,7 +84,7 @@ class AuthorSeeder extends Seeder
                 'date_of_birth'=> "1973-05-08",
                 'place_of_birth'=> "Makubetsu, Japan",
                 'author_pic'=> "https://www.animeclick.it/immagini/autore/Hiromu_Arakawa/cover/2481-Hiromu_Arakawa-foto.jpg",
-                'brief_biography'=> "Hiromu Arakawa is a renowned Japanese manga artist, best known for her highly successful series Fullmetal Alchemist (2001–2010). Born on May 8, 1973, in Makubetsu, Japan, she grew up on a dairy farm as the youngest of five siblings. From a young age, Arakawa showed an interest in art and storytelling, often drawing in her school textbooks",
+                'brief_biography'=> "Hiromu Arakawa is a renowned Japanese manga artist, best known for her highly successful series Fullmetal Alchemist (2001–2010). Born on May 8, 1973, in Makubetsu, Japan, she grew up on a dairy farm as the youngest of five siblings. From a young age, Arakawa showed an interest in art and storytelling, often drawing in her school textbooks.",
             ],
         ];
 
