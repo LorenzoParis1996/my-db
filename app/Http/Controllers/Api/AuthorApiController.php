@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreAuthorRequest;
 use App\Models\Author;
+use Illuminate\Http\Request;
 
 class AuthorApiController extends Controller
 {
@@ -25,6 +26,18 @@ class AuthorApiController extends Controller
         return response()->json([
             'success' => true,
             'results' => $author
+        ]);
+    }
+
+    public function store(StoreAuthorRequest $request)
+    {
+        $data = $request->validated();
+
+        $newAuthor = Author::create($data);
+
+        return response()->json([
+            'success' => true,
+            'results' => $newAuthor
         ]);
     }
 }

@@ -16,12 +16,14 @@ use App\Http\Controllers\Api\AuthorApiController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+/*Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
-});
+});*/
 
-Route::get('/animes', [AnimeApiController::class, 'index'])->name('api.authors.index');
+Route::get('/animes', [AnimeApiController::class, 'index'])->name('api.animes.index');
 Route::get('/animes/{anime}', [AnimeApiController::class, 'show'])->name('api.animes.show');
 
 Route::get('/authors', [AuthorApiController::class, 'index'])->name('api.authors.index');
 Route::get('/authors/{author}', [AuthorApiController::class, 'show'])->name('api.author.show');
+
+Route::post('/authors', [AuthorApiController::class, 'store'])->name('api.authors.store');
