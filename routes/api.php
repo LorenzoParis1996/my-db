@@ -27,5 +27,6 @@ Route::get('/authors', [AuthorApiController::class, 'index'])->name('api.authors
 Route::get('/authors/{author}', [AuthorApiController::class, 'show'])->name('api.author.show');
 
 Route::post('/authors', [AuthorApiController::class, 'store'])->name('api.authors.store');
+Route::post('/animes', [AnimeApiController::class, 'store'])->name('api.animes.store');
 
 Route::put('/authors/{author}', [AuthorApiController::class, 'update'])->name('api.authors.update');
