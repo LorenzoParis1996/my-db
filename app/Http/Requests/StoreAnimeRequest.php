@@ -27,7 +27,12 @@ class StoreAnimeRequest extends FormRequest
             'audience_id'=>'nullable|integer|exists:audiences,id',
             'release_year'=>'required|date_format:Y',
             'cover_image'=>'nullable|url',
-            'description'=>  'required|min:10|max:1000'
+            'description'=>  'required|min:10|max:1000',
+            //Se il nuovo record da creare si aspetta che abbia allegato anche lo studio e l'autore, devono essere entrambi inseriti nella valdidazione per validare dati in array raggruppati dentro un array. Possiamo anche includere la possibilita' che sia null il dato come validazione.
+            'studios' => 'nullable|array',
+            'studios.*.studio_id' => 'exists:studios,id',
+            'authors' => 'nullable|array',
+            'authors.*.author_id' => 'exists:authors,id',
         ];
     }
 }

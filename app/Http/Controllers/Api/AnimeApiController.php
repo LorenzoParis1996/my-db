@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreAnimeRequest;
 use Illuminate\Http\Request;
 use App\Models\Anime;
+//use Illuminate\Support\Facades\Log;
 
 class AnimeApiController extends Controller
 {
@@ -35,9 +36,22 @@ class AnimeApiController extends Controller
 
         $newAnime = Anime::create($data);
 
+        if (isset($data['studios'])) { //verifico che la variabile sia definita e non null
+            //array_column e' una funzione che mi permette di estrarre dati specifici da un array multidimensionale da una column specifica. Col primo parametro accedo all'array ($data['studios']), col secondo parametro prendo il valore che mi interressa ('studios_id').
+            $studioIds = array_column($data['studios'], 'studio_id');
+            //Log::info('Attaching studios: ', $studioIds);
+            $newAnime->studios()->attach($studioIds);
+        }
+
+        if (isset($data['authors'])) {
+            $authorIds = array_column($data['authors'], 'author_id');
+            //Log::info('Attaching authors: ', $authorIds);
+            $newAnime->authors()->attach($authorIds);
+        }
+
         return response()->json([
             'success' => true,
-            'results' =>$newAnime
+            'results' => Anime::with('studios', 'audience', 'authors')->find($newAnime->id)
         ]);
     }
 }
