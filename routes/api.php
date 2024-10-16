@@ -30,3 +30,4 @@ Route::post('/authors', [AuthorApiController::class, 'store'])->name('api.author
 Route::post('/animes', [AnimeApiController::class, 'store'])->name('api.animes.store');
 
 Route::put('/authors/{author}', [AuthorApiController::class, 'update'])->name('api.authors.update');
+Route::put('/animes/{anime}', [AnimeApiController::class, 'update'])->name('api.animes.update');

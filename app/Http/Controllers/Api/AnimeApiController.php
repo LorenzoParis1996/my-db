@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreAnimeRequest;
+use App\Http\Requests\UpdateAnimeRequest;
 use Illuminate\Http\Request;
 use App\Models\Anime;
 //use Illuminate\Support\Facades\Log;
@@ -52,6 +53,28 @@ class AnimeApiController extends Controller
         return response()->json([
             'success' => true,
             'results' => Anime::with('studios', 'audience', 'authors')->find($newAnime->id)
+        ]);
+    }
+
+    public function update(UpdateAnimeRequest $request, Anime $anime)
+    {
+        $data = $request->validated();
+
+        if (isset($data['studios'])) {
+            $studioIds = array_column($data['studios'], 'studio_id');
+            $anime->studios()->sync($studioIds);
+        }
+
+        if (isset($data['authors'])) {
+            $authorIds = array_column($data['authors'], 'author_id');
+            $anime->authors()->sync($authorIds);
+        }
+
+        $anime->update($data);
+
+        return response()->json([
+            'success' => true,
+            'results' => Anime::with('studios', 'audience', 'authors')
         ]);
     }
 }
