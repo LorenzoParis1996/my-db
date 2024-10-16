@@ -14,9 +14,15 @@ class AnimeController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $animes = Anime::all();
+        //$animes = Anime::all();
+
+        $searchTerm = $request->input('term');
+
+        $animes = Anime::when($searchTerm, function ($query, $searchTerm) {
+            return $query->where('title', 'LIKE', '%' . $searchTerm . '%');
+        })->get();
 
         //dd($animes);
         return view('guest.anime.index', compact('animes'));

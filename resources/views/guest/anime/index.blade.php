@@ -6,6 +6,16 @@
 
 <div class="container">
 
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <form action="{{route('guest.anime.index')}}" method="GET" class="d-flex" role="search">
+            <input class="form-control me-2" id="term" value="{{request('term')}}" name="term" type="search" placeholder="Search anime" aria-label="Search anime">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+            <a href="{{route('guest.anime.index')}}" class="btn btn-danger ms-2" type="reset">Reset</a>
+          </form>
+        </div>
+    </nav>
+
     <article class="d-flex flex-wrap justify-content-center">
 
         @foreach ($animes as $anime)
