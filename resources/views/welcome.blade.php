@@ -10,9 +10,7 @@
 
     </head>
     <body>
-        <h1>layout in progress</h1>
-        <hr>
-        <div>
+        <!--<div>
             @if (Route::has('login'))
                 <div class="text-decoration-none">
                     @auth
@@ -26,13 +24,14 @@
                     @endauth
                 </div>
             @endif
-        </div>
+        </div>-->
         <h2>Welcome to DB Anime. Here you can see some of my favourites anime, and if you want, you can create an account and add some to the list (WIP).</h2>
 
         <div>
             <ul class="list-unstyled">
                 <li><a href="{{route('guest.anime.index')}}">Animes</a></li>
                 <li><a href="{{route('guest.author.index')}}">Authors</a></li>
+                <li><a href="{{route('guest.products.index')}}">Shop</a></li>
             </ul>
         </div>
     </body>

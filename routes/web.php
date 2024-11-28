@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\Guest\AnimeController;
 use App\Http\Controllers\Guest\AuthorController;
+use App\Http\Controllers\Guest\ProductsController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +26,8 @@ Route::get('/guest/anime/{anime}', [AnimeController::class, 'show'])->name('gues
 
 Route::get('/guest/author', [AuthorController::class, 'index'])->name('guest.author.index');
 Route::get('/guest/author/{author}', [AuthorController::class, 'show'])->name('guest.author.show');
+
+Route::get('/guest/products', [ProductsController::class, 'index'])->name('guest.products.index');
 
 Auth::routes();
 
