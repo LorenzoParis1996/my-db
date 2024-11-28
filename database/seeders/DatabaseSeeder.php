@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             AudienceSeeder::class,
             StudioSeeder::class,
             AnimeSeeder::class,
+            ProductSeeder::class,
         ]);
     }
 }
