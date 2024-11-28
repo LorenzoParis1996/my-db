@@ -20,6 +20,7 @@ class ProductSeeder extends Seeder
             'format'=> "Blu-Ray",
             'price'=> 17.99,
             'stock'=> 5,
+            'image'=> "https://www.animeclick.it/immagini/anime/Le_bizzarre_avventure_di_JoJo_Stone_Ocean/cover/Le_bizzarre_avventure_di_JoJo_Stone_Ocean-cover-thumb.jpg",
            ],
            [
             'name'=> "Nana",
@@ -27,6 +28,7 @@ class ProductSeeder extends Seeder
             'format'=> "DVD",
             'price'=> 12.99,
             'stock'=> 3,
+            'image'=> "https://www.animeclick.it/immagini/anime/Nana/cover/Nana-cover-thumb.jpg",
            ],
            [
             'name'=> "Cowboy Bebop",
@@ -34,6 +36,7 @@ class ProductSeeder extends Seeder
             'format'=> "DVD",
             'price'=> 12.99,
             'stock'=> 6,
+            'image'=> "https://www.animeclick.it/immagini/anime/Cowboy_Bebop/cover/Cowboy_Bebop-cover-thumb.jpg_large",
            ],
            [
             'name'=> "Neon Genesis Evangelion",
@@ -41,6 +44,7 @@ class ProductSeeder extends Seeder
             'format'=> "DVD",
             'price'=> 12.99,
             'stock'=> 2,
+            'image'=> "https://www.animeclick.it/immagini/anime/Neon_Genesis_Evangelion/cover/Neon_Genesis_Evangelion-cover-thumb.jpg",
            ],
            [
             'name'=> "Attack on Titan",
@@ -48,6 +52,7 @@ class ProductSeeder extends Seeder
             'format'=> "Blu-Ray",
             'price'=> 17.99,
             'stock'=> 4,
+            'image'=> "https://www.animeclick.it/immagini/anime/Attack_on_Titan/cover/Attack_on_Titan-cover-thumb.jpg",
            ],
            [
             'name'=> "Death Note",
@@ -55,6 +60,7 @@ class ProductSeeder extends Seeder
             'format'=> "DVD",
             'price'=> 12.99,
             'stock'=> 5,
+            'image'=> "https://www.animeclick.it/immagini/anime/Death_Note/cover/Death_Note-cover-thumb.jpg",
            ],
            [
             'name'=> "Hajime no Ippo",
@@ -62,6 +68,7 @@ class ProductSeeder extends Seeder
             'format'=> "DVD",
             'price'=> 12.99,
             'stock'=> 3,
+            'image'=> "https://www.animeclick.it/images/serie/HajimenoIppo/HajimenoIppo-cover-thumb.jpg",
            ],
            [
             'name'=> "Fullmetal Alchemist: Brotherhood",
@@ -69,6 +76,7 @@ class ProductSeeder extends Seeder
             'format'=> "Blu-Ray",
             'price'=> 17.99,
             'stock'=> 4,
+            'image'=> "https://www.animeclick.it/immagini/anime/Fullmetal_Alchemist_2009/cover/Fullmetal_Alchemist_2009-cover-thumb.jpg",
            ],
         ];
 
