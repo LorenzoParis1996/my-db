@@ -14,6 +14,7 @@ class Product extends Model
         'season',
         'format',
         'price',
-        'stock'
+        'stock',
+        'image',
     ];
 }

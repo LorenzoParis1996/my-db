@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Guest;
 use App\Http\Controllers\Controller;
+use App\Models\Product;
 
 use Illuminate\Http\Request;
 
@@ -10,9 +11,15 @@ class ProductsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view ('guest.products.index');
+        $searchTerm = $request->input('term');
+
+        $products = Product::when($searchTerm, function ($query, $searchTerm) {
+            return $query->where('name', 'LIKE', '%' . $searchTerm . '%');
+        })->get();
+
+        return view ('guest.products.index', compact('products'));
     }
 
     /**
