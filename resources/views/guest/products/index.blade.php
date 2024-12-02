@@ -14,6 +14,14 @@
             <button class="btn btn-outline-success" type="submit">Search</button>
             <a href="{{route('guest.anime.index')}}" class="btn btn-danger ms-2" type="reset">Reset</a>
           </form>
+          <div class="d-flex">
+            <div class="pe-4">
+              Quantity order:
+            </div>
+            <div>
+              <a href="" class="btn btn-primary btn-sm">Order</a>
+            </div>
+          </div>
         </div>
     </nav>
 
@@ -33,7 +41,7 @@
               <h6 class="card-title">Price: {{$product->price}}$</h6>
               <h6 class="card-title">Stock: {{$product->stock}}</h6>
               <div class="d-flex justify-content-center mt-auto">
-                  <button class="btn btn-primary btn-sm disabled">Add to cart</button>
+                  <button class="btn btn-primary btn-sm">Add to cart</button>
               </div>
             </div>
         </div>
