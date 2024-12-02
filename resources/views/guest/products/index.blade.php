@@ -16,12 +16,13 @@
           </form>
           <div class="d-flex">
             <div class="pe-4">
-              Quantity order:
+              Quantity order: <span id="quantity-order">0</span>
             </div>
             <div>
               <a href="" class="btn btn-primary btn-sm">Order</a>
             </div>
           </div>
+          <span id="add-message" class="text-success" style="display: none"></span>
         </div>
     </nav>
 
@@ -41,7 +42,7 @@
               <h6 class="card-title">Price: {{$product->price}}$</h6>
               <h6 class="card-title">Stock: {{$product->stock}}</h6>
               <div class="d-flex justify-content-center mt-auto">
-                  <button class="btn btn-primary btn-sm">Add to cart</button>
+                  <button class="btn btn-primary btn-sm add">Add to cart</button>
               </div>
             </div>
         </div>
@@ -49,8 +50,11 @@
 
         @endforeach
     </article>
+    @vite('resources/js/my-scripts/cart.js')
 
 
 </div>
 
 @endsection
+
+
