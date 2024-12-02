@@ -12,17 +12,17 @@
           <form action="{{route('guest.products.index')}}" method="GET" class="d-flex" role="search">
             <input class="form-control me-2" id="term" value="{{request('term')}}" name="term" type="search" placeholder="Search product" aria-label="Search product">
             <button class="btn btn-outline-success" type="submit">Search</button>
-            <a href="{{route('guest.anime.index')}}" class="btn btn-danger ms-2" type="reset">Reset</a>
+            <a href="{{route('guest.products.index')}}" class="btn btn-danger ms-2" type="reset">Reset</a>
           </form>
           <div class="d-flex">
             <div class="pe-4">
               Quantity order: <span id="quantity-order">0</span>
             </div>
             <div>
-              <a href="" class="btn btn-primary btn-sm">Order</a>
+              <a href="" class="btn btn-primary btn-sm disabled">Order</a>
             </div>
           </div>
-          <span id="add-message" class="text-success" style="display: none"></span>
+          <span id="add-message" class="text-primary" style="display: none"></span>
         </div>
     </nav>
 
@@ -44,6 +44,9 @@
               <div class="d-flex justify-content-center mt-auto">
                   <button class="btn btn-primary btn-sm add">Add to cart</button>
               </div>
+              <div class="d-flex justify-content-center mt-auto">
+                <button class="btn btn-danger btn-sm remove">Remove from cart</button>
+            </div>
             </div>
         </div>
 

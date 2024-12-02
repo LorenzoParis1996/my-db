@@ -30,3 +30,17 @@ document.querySelectorAll('.add').forEach(button => {
     });
 });
 
+document.querySelectorAll('.remove').forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if (quantity > 0) {
+            quantity--;
+            updateQuantityOrder();
+            showMessage('Product removed from cart');
+        } else {
+            showMessage('No products in your cart to remove');
+        }
+    });
+});
+
