@@ -40,7 +40,7 @@
               <h6 class="card-title">Season: {{$product->season}}</h6>
               <h6 class="card-title">Format: {{$product->format}}</h6>
               <h6 class="card-title">Price: {{$product->price}}$</h6>
-              <h6 class="card-title">Stock: {{$product->stock}}</h6>
+              <h6 class="card-title">Stock: <span class="stock-quantity" data-stock="{{$product->stock}}">{{$product->stock}}</span></h6>
               <div class="d-flex justify-content-center mt-auto">
                   <button class="btn btn-primary btn-sm add">Add to cart</button>
               </div>

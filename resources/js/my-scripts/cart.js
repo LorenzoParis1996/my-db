@@ -17,9 +17,16 @@ function showMessage(message) {
 document.querySelectorAll('.add').forEach(button => {
     button.addEventListener('click', (e) => {
         e.preventDefault(); //to prevent default form or link submission/behavior
-        quantity++;
-        updateQuantityOrder();
-        showMessage('Product added to cart');
+        const stockEl = button.closest('.card-body').querySelector('.stock-quantity');
+        const availableStock = parseInt(stockEl.dataset.stock); //retrieves available stock from data attribute
+
+        if (quantity < availableStock) {
+            quantity++;
+            updateQuantityOrder();
+            showMessage('Product added to cart');
+        } else {
+            showMessage('No more stock available to add');
+        }
     });
 });
 
