@@ -1,7 +1,9 @@
-let quantity = 0;
+let quantities = {};
 
 function updateQuantityOrder() {
-    document.getElementById('quantity-order').innerText = quantity;
+    const totalQuantity = Object.values(quantities).reduce((sum, qty) =>
+    sum + qty, 0);//totalQuantity holds the sum (starting at 0) of all product quantities in the cart, calculated by summing the values from the quantities object.
+    document.getElementById('quantity-order').innerText = totalQuantity;
 }
 
 function showMessage(message) {
@@ -19,9 +21,14 @@ document.querySelectorAll('.add').forEach(button => {
         e.preventDefault(); //to prevent default form or link submission/behavior
         const stockEl = button.closest('.card-body').querySelector('.stock-quantity');
         const availableStock = parseInt(stockEl.dataset.stock); //retrieves available stock from data attribute
+        const productId = button.closest('.card').dataset.productId;
 
-        if (quantity < availableStock) {
-            quantity++;
+        if (!quantities[productId]) {
+            quantities[productId] = 0;
+        }//initialize quantity for this product if it doesn't exist
+
+        if (quantities[productId] < availableStock) {
+            quantities[productId]++;
             updateQuantityOrder();
             showMessage('Product added to cart');
         } else {
@@ -34,8 +41,10 @@ document.querySelectorAll('.remove').forEach(button => {
     button.addEventListener('click', (e) => {
         e.preventDefault();
 
-        if (quantity > 0) {
-            quantity--;
+        const productId = button.closest('.card').dataset.productId;
+
+        if (quantities[productId] > 0) {
+            quantities[productId]--;
             updateQuantityOrder();
             showMessage('Product removed from cart');
         } else {

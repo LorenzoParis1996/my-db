@@ -30,7 +30,7 @@
 
         @foreach ($products as $product)
 
-        <div class="card mx-2 mb-3" style="width: 18rem;">
+        <div class="card mx-2 mb-3" style="width: 18rem;" data-product-id="{{$product->id}}">
             <div class="img-container">
                 <img src="{{asset($product->image ? $product->image : 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png')}}" class="card-img-top" alt="{{$product->name}}">
 
